@@ -7,7 +7,9 @@ get_clip() {
         url="http://music.163.com/song/media/outer/url?id="$id".mp3"
         date;
         AUDIO_PATH=${tag_folder}"/"${id}".%(ext)s"
-        youtube-dl --quiet --extract-audio ${url} -o "${AUDIO_PATH}";
+        if [ ! -f ${tag_folder}"/"${id}".mp3" ]; then
+            youtube-dl --quiet --extract-audio ${url} -o "${AUDIO_PATH}";
+        fi
     done
 }
 export -f get_clip;
