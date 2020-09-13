@@ -12,7 +12,8 @@
 
 ### 根据playlistid获取songid
 - 访问 url
-    - [playlistid]对应url为https://music.163.com/#/playlist?id=[playlistid]
+    - playlistid 5217150082
+    - 对应url为https://music.163.com/#/playlist?id=5217150082
 - 通过 url 获取 html
     - 直接用 requests.get 即可 
 - 通过 html 获取 songid
